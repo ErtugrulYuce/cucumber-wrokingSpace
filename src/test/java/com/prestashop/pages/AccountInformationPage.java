@@ -15,13 +15,6 @@ public class AccountInformationPage {
 	@FindBy (id="firstname")
 	public WebElement firstName;
 	
-	@FindBy (id="lastname")
-	public WebElement lastName;
-	
-	@FindBy (id="email")
-	public WebElement email;
-	
-	@FindBy (id="passwd")
-	public WebElement password;
+
 	
 }

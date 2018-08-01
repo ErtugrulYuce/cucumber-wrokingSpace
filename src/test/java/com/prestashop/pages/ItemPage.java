@@ -16,20 +16,7 @@ public class ItemPage {
 	@FindBy(tagName = "h1")
 	public WebElement itemName;
 
-	@FindBy(id = "quantity_wanted")
-	public WebElement count;
-	
-	@FindBy(className = "icon-plus")
-	public WebElement plus;
-	
-	@FindBy(className = "icon-minus")
-	public WebElement minus;
 
-	@FindBy(css = "#product_condition>.editable")
-	public WebElement condition;
-	
-	@FindBy(className = "our_price_display")
-	public WebElement price;
 	
 	public Select size() {
 		return new Select(Driver.getDriver().findElement(By.id("group_1")));

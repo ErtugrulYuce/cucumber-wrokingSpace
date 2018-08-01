@@ -17,15 +17,8 @@ public class Hooks {
 	@Before
 	public void setUp() {
 		Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		// Driver.getDriver().manage().window().fullscreen();
-		Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-	}
-
-	@Before("@amazon_check")
-	public void setUpAmazon() {
-		Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Driver.getDriver().manage().window().fullscreen();
-		Driver.getDriver().get("http://amazon.com");
+		Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 	}
 
 	@After
@@ -33,8 +26,7 @@ public class Hooks {
 		// only takes a screenshot if the scenario fails
 		if (scenario.isFailed()) {
 			// taking a screenshot
-			final byte[] screenshot = ((TakesScreenshot) Driver.getDriver())
-					.getScreenshotAs(OutputType.BYTES);
+			final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
 			// adding the screenshot to the report
 			scenario.embed(screenshot, "image/png");
 		}
