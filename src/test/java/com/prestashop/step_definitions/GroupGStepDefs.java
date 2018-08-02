@@ -45,19 +45,20 @@ public class GroupGStepDefs {
 
 	@Then("verify all team names")
 	public void verify_all_team_names(List<String> teamName) {
-		System.out.println(teamName);
-
-		Boolean b = false;
-		for (String eachTeam : teamName) {
-
-			String xpaths = "//td[contains(@class,'fi-table__teamname teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'"
-					+ eachTeam + "')]";
-
-			b = Driver.getDriver().findElement(By.xpath(xpaths)).isDisplayed();
-			assertTrue(b);
-
-		}
-
+//		System.out.println(teamName);
+//
+//		Boolean b = false;
+//		for (String eachTeam : teamName) {
+//
+//			String xpaths = "//td[contains(@class,'fi-table__teamname teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'"
+//					+ eachTeam + "')]";
+//
+//			b = Driver.getDriver().findElement(By.xpath(xpaths)).isDisplayed();
+//			assertTrue(b);
+		
+for (int i = 0; i < teamName.size(); i++) {
+		assertTrue(homePage.verifyAllTeam(teamName));
+}
 	}
 
 }

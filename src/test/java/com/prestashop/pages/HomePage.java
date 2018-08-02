@@ -39,6 +39,14 @@ public class HomePage {
 	// teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'Panama')]")
 	// public WebElement Pana;
 
-	
+	static int index = 0;
+	public static boolean verifyAllTeam(List<String> team) {
+		String eachteam = team.get(index);
+		String Xpath= "//td[contains(@class,'fi-table__teamname teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'"+ eachteam +"')]";
+		boolean b = Driver.getDriver().findElement(By.xpath(Xpath)).isDisplayed();
+		index+=1;		
+		if(index==4) {index = 0;}
+		return b;
+	}
 
 }
