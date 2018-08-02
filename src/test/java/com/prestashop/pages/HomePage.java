@@ -24,15 +24,21 @@ public class HomePage {
 	public WebElement groupIcon;
 
 	@FindBy(xpath = "//span[contains(text(),'Group G')]")
-	public WebElement groupGicon;
+	public WebElement groupGIcon;
 
-	@FindBy(xpath = "//td[contains(@class,'fi-table__teamname teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'Belgium')]")
-	public WebElement Belg;
-	@FindBy(xpath = "//td[contains(@class,'fi-table__teamname teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'England')]")
-	public WebElement Engl;
-	@FindBy(xpath = "//td[contains(@class,'fi-table__teamname teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'Tunisia')]")
-	public WebElement Tuns;
-	@FindBy(xpath = "//td[contains(@class,'fi-table__teamname teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'Panama')]")
-	public WebElement Pana;
+	// @FindBy(xpath = "//td[contains(@class,'fi-table__teamname
+	// teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'Belgium')]")
+	// public WebElement Belg;
+	// @FindBy(xpath = "//td[contains(@class,'fi-table__teamname
+	// teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'England')]")
+	// public WebElement Engl;
+	// @FindBy(xpath = "//td[contains(@class,'fi-table__teamname
+	// teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'Tunisia')]")
+	// public WebElement Tuns;
+	// @FindBy(xpath = "//td[contains(@class,'fi-table__teamname
+	// teamname-nolink')]//span[contains(@class,'fi-t__nText')][contains(text(),'Panama')]")
+	// public WebElement Pana;
+
+	
 
 }
